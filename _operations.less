@@ -1,0 +1,110 @@
+.border-radius(@radius: 10px) {
+  -webkit-border-radius: @radius; /* Webkit */
+  -moz-border-radius: @radius; /* Gecko */
+  -khtml-border-radius: @radius; /* Konqueror */
+  border-radius: @radius; /* CSS3 */
+  .css3-behavior;
+}
+
+.bottom-border-radius(@radius: 5px) {
+  -moz-border-radius-bottomleft: @radius; /* Gecko */
+  -moz-border-radius-bottomright: @radius;
+  -webkit-border-bottom-left-radius: @radius;  /* Webkit */
+  -webkit-border-bottom-right-radius: @radius;
+  -khtml-border-bottom-left-radius: @radius; /* Konqueror */
+  -khtml-border-bottom-right-radius: @radius;
+  border-bottom-left-radius: @radius; /* CSS3 */
+  border-bottom-right-radius: @radius;
+  .css3-behavior;
+}
+
+.box-shadow(@xOffset: 0px, @yOffset: 2px, @blurRadius: 4px, @color: rgba(0,0,0,0.4)) {
+  -webkit-box-shadow: @xOffset @yOffset @blurRadius @color; /* Webkit */
+  -moz-box-shadow: @xOffset @yOffset @blurRadius @color; /* Gecko */
+  box-shadow: @xOffset @yOffset @blurRadius @color; /* CSS3 */
+  .css3-behavior;
+}
+
+.box-shadow-inset {
+  -webkit-box-shadow: inset 0px 2px 4px rgba(0,0,0,0.4); /* Webkit */
+  -moz-box-shadow: inset 0px 2px 4px rgba(0,0,0,0.4); /* Gecko */
+  box-shadow: inset 0px 2px 4px rgba(0,0,0,0.4); /* CSS3 */
+  .css3-behavior;
+}
+
+/* Only redefines background attribute on supported browsers.
+ * Be sure to include a default value. */
+.gradient(@startColor: #CCC, @endColor: #EEE) {
+  background: -moz-linear-gradient(90deg, @startColor, @endColor); /* Gecko */
+  background: -webkit-gradient(linear, left bottom, left top, from(@startColor) to(@endColor)); /* Webkit */
+  //TODO: Figure out how to make these work when wrapped in strings.
+  //filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='@startColor', endColorstr='@endColor'); /* IE6 & IE7 */
+  //-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='@startColor', endColorstr='@endColor')"; /* IE8 */
+  -pie-background: linear-gradient(90deg, @startColor, @endColor); /*PIE*/
+  .css3-behavior;
+}
+
+.left-border-radius(@radius: 5px) {
+  -moz-border-radius-topleft: @radius; /* Firefox */
+  -moz-border-radius-bottomleft: @radius;
+  -webkit-border-top-left-radius: @radius; /* Safari */
+  -webkit-border-bottom-left-radius: @radius;
+  -khtml-border-top-left-radius: @radius; /* Konqueror */
+  -khtml-border-bottom-left-radius: @radius;
+  border-top-left-radius: @radius; /* CSS3 */
+  border-bottom-left-radius: @radius;
+}
+
+.opacity(@opacity: .95) {
+  @ie-opacity: @opacity * 100;
+  -khtml-opacity: @opacity; /* Webkit 1.x, Konqueror */
+  -moz-opacity: @opacity; /* Gecko 0.x */
+  opacity: @opacity; /* CSS3 */
+  filter: alpha(opacity=@ie-opacity); /* IE 6-8 */
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 4px #878787;
+}
+
+.text-shadow-link {
+  text-shadow: 2px 2px 4px #A4ACDE;
+}
+
+.top-border-radius(@radius: 10px) {
+  -moz-border-radius-topleft: @radius; /* Gecko */
+  -moz-border-radius-topright: @radius;
+  -moz-border-radius-bottomleft: 0px;
+  -moz-border-radius-bottomright: 0px;
+  -webkit-border-top-left-radius: @radius; /* Webkit */
+  -webkit-border-top-right-radius: @radius;
+  -webkit-border-bottom-left-radius: 0px;
+  -webkit-border-bottom-right-radius: 0px;
+  -khtml-border-top-left-radius: @radius; /* Konqueror */
+  -khtml-border-top-right-radius: @radius;
+  -khtml-border-bottom-left-radius: 0px;
+  -khtml-border-bottom-right-radius: 0px;
+  border-top-left-radius: @radius; /* CSS3 */
+  border-top-right-radius: @radius;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  .css3-behavior;
+}
+
+.top-left-border-radius(@radius: 5px) {
+  -moz-border-radius-topleft: @radius; /* Gecko */
+  -webkit-border-top-left-radius: @radius; /* Webkit */
+  -khtml-border-top-left-radius: @radius;
+  border-top-left-radius: @radius; /* CSS3 */
+  .css3-behavior;
+}
+
+.top-right-border-radius(@radius: 5px) {
+  -moz-border-radius-topright: @radius; /* Gecko */
+  -webkit-border-top-right-radius: @radius; /* Webkit */
+  -khtml-border-top-right-radius: @radius;
+  border-top-right-radius: @radius; /* CSS3 */
+  .css3-behavior;
+}
+
+
